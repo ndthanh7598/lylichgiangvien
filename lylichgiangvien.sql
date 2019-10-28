@@ -5,17 +5,17 @@ use lylichgiangvien;
 
 create table tbl_GiangVien(
 	MaGV int identity(1,1) not null,
-	TenGV nvarchar(100),
+	TenGV nvarchar(100) not null,
 	GioiTinh nvarchar(50),
 	NgaySinh date,
 	DiaChi nvarchar(500),
 	SDT nvarchar(50),
 	Email nvarchar(100),
-	TenDeTaiNC nvarchar(255),
-	NamBatDau date,
-	NamKetThuc date,
+	TenDeTaiNC nvarchar(255) not null,
+	NamBatDau date not null,
+	NamKetThuc date not null,
 	GiaiThuong nvarchar(50),
-	TrangThai nvarchar(50),
+	TrangThai nvarchar(50) not null,
 	MaDV int not null,
 	MaHH int not null,
 	MaHV int not null
@@ -23,8 +23,8 @@ create table tbl_GiangVien(
 
 create table tbl_TaiKhoan(
 	TenTaiKhoan nvarchar(255) not null,
-	MatKhau nvarchar(255),
-	TrangThai nvarchar(50),
+	MatKhau nvarchar(255) not null,
+	TrangThai nvarchar(50) not null,
 	MaGV int,
 	MaCB int,
 	MaQuyen int not null
@@ -32,12 +32,12 @@ create table tbl_TaiKhoan(
 
 create table tbl_Quyen(
 	MaQuyen int identity(1,1) not null,
-	TenQuyen nvarchar(255)
+	TenQuyen nvarchar(255) not null
 );
 
 create table tbl_CanBo(
 	MaCB int identity(1,1) not null,
-	TenCB nvarchar(255),
+	TenCB nvarchar(255) not null,
 	GioiTinh nvarchar(50),
 	NgaySinh date,
 	DiaChi nvarchar(255),
@@ -46,28 +46,28 @@ create table tbl_CanBo(
 
 create table tbl_BSLyLich(
 	MaBS int identity(1,1) not null,
-	ThoiGianBS date,
-	TenDeTaiNC nvarchar(255),
-	NamBatDau date,
-	NamKetThuc date,
+	ThoiGianBS date not null,
+	TenDeTaiNC nvarchar(255) not null,
+	NamBatDau date not null,
+	NamKetThuc date not null,
 	GiaiThuong nvarchar(50),
-	TrangThai nvarchar(50),
-	MaGV int
+	TrangThai nvarchar(50) not null,
+	MaGV int not null
 );
 
 create table tbl_DonVi(
 	MaDV int identity(1,1) not null,
-	TenDV nvarchar(255)
+	TenDV nvarchar(255) not null
 );
 
 create table tbl_HocHam(
 	MaHH int identity(1,1) not null,
-	TenHH nvarchar(255)
+	TenHH nvarchar(255) not null
 );
 
 create table tbl_HocVi(
 	MaHV int identity(1,1) not null,
-	TenHV nvarchar(255)
+	TenHV nvarchar(255) not null
 );
 
 -- Tạo khoá và ràng buộc
