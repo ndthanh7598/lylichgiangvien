@@ -8,7 +8,7 @@ namespace LyLichGiangVien.Model
 {
     public class ConnectDatabase
     {
-        public string strCon = @"Data Source=DESKTOP-LCKS2LS\Q;Initial Catalog=Fithou.Web.Adv;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public string strCon = @"Data Source=DESKTOP-AH9CHCE;Initial Catalog=lylichgiangvien;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public SqlConnection connectDatabase()
         {
             SqlConnection myCnn = new SqlConnection(strCon);
