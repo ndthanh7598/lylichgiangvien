@@ -26,6 +26,8 @@ namespace LyLichGiangVien
             Session["maCB"] = "";
             Session["maGV"] = "";
             Session["quyen"] = "";
+            Session["type"] = "";
+            Session["mess"] = "";
             Session["sessId"] = Session.SessionID;
             Session.Timeout = 100;
             Application.UnLock();

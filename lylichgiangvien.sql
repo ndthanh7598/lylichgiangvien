@@ -117,3 +117,109 @@ as
 		select * from tbl_TaiKhoan
 		where TenTaiKhoan like @Taikhoan and MatKhau = @Matkhau
 	end
+
+create procedure get_donvi
+as
+	begin
+		select * from tbl_DonVi
+	end
+
+create procedure get_hocham
+as
+	begin
+		select * from tbl_HocHam
+	end
+
+create procedure get_hocvi
+as
+	begin
+		select * from tbl_HocVi
+	end
+
+create procedure get_thongtingiangvien
+	@maGV int
+as
+	begin
+		select * from tbl_GiangVien where MaGV = @maGV
+	end
+
+create procedure update_thongtingiangvien
+	@MaGV int,
+	@TenGV nvarchar(100),
+	@GioiTinh nvarchar(50),
+	@NgaySinh date,
+	@DiaChi nvarchar(500),
+	@SDT nvarchar(50),
+	@Email nvarchar(100),
+	@TenDeTaiNC nvarchar(255),
+	@NamBatDau date,
+	@NamKetThuc date,
+	@GiaiThuong nvarchar(50),
+	@TrangThai nvarchar(50),
+	@MaDV int,
+	@MaHH int,
+	@MaHV int
+as
+	begin
+		update tbl_GiangVien set TenGV = @TenGV, GioiTinh = @GioiTinh, NgaySinh = @NgaySinh,
+								DiaChi = @DiaChi, SDT = @SDT, Email = @Email, TenDeTaiNC = @TenDeTaiNC,
+								NamBatDau = @NamBatDau, NamKetThuc = NamKetThuc, GiaiThuong = @GiaiThuong,
+								TrangThai = @TrangThai, MaDV = @MaDV,MaHH = MaHH, MaHV = @MaHV
+					where MaGV = @MaGV
+	end
+
+create procedure get_lylichbosung
+	@MaGV int
+as
+	begin
+		select * from tbl_BSLyLich where MaGV = @MaGV
+	end
+
+create procedure insert_lylichbosung
+	@ThoiGianBS date,
+	@TenDeTaiNC nvarchar(255),
+	@NamBatDau date,
+	@NamKetThuc date,
+	@GiaiThuong nvarchar(50),
+	@TrangThai nvarchar(50),
+	@MaGV int
+as
+	begin
+		insert into tbl_BSLyLich(ThoiGianBS,TenDeTaiNC,NamBatDau,NamKetThuc,GiaiThuong,TrangThai,MaGV) values
+		(@ThoiGianBS,@TenDeTaiNC,@NamBatDau,@NamKetThuc,@GiaiThuong,@TrangThai,@MaGV)
+	end
+
+create procedure check_lylichchuaduyet
+	@MaBS int
+as
+	begin
+		select * from tbl_BSLyLich where MaBS = @MaBS and TrangThai = N'chuaduyet'
+	end
+
+create procedure get_lylichbosung_theoid
+	@MaBS int
+as
+	begin
+		select * from tbl_BSLyLich where MaBS = @MaBS
+	end
+
+create procedure delete_lylichbosung
+	@MaBS int
+as
+	begin
+		delete from tbl_BSLyLich where MaBS = @MaBS
+	end
+
+create procedure update_lylichbosung
+	@MaBS int,
+	@ThoiGianBS date,
+	@TenDeTaiNC nvarchar(255),
+	@NamBatDau date,
+	@NamKetThuc date,
+	@GiaiThuong nvarchar(50)
+as
+	begin
+		update tbl_BSLyLich set ThoiGianBS = @ThoiGianBS, TenDeTaiNC = @TenDeTaiNC, NamBatDau = @NamBatDau,
+								NamKetThuc = @NamKetThuc, GiaiThuong = @GiaiThuong
+					where MaBS = @MaBS
+	end

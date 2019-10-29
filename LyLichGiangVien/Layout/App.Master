@@ -69,10 +69,10 @@
                                 <a href="#"><i class="fa fa-briefcase fa-fw"></i> Hồ sơ lý lịch khoa học<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="#">Thông tin lý lịch khoa học</a>
+                                        <a href="ThongTinLyLich.aspx">Thông tin lý lịch khoa học</a>
                                     </li>
                                     <li>
-                                        <a href="#">Bổ sung lý lịch khoa học</a>
+                                        <a href="BoSungLyLich.aspx">Bổ sung lý lịch khoa học</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
