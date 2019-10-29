@@ -117,3 +117,40 @@ as
 		select * from tbl_TaiKhoan
 		where TenTaiKhoan like @Taikhoan and MatKhau = @Matkhau
 	end
+
+
+create proc get_dsHoSoLyLich
+as
+	Begin
+		select * from tbl_GiangVien
+	End
+
+create proc get_dsCanBo
+as
+	Begin
+		select * from tbl_CanBo
+	End
+
+create proc get_dsGiangVien
+as
+	Begin
+		select * from tbl_GiangVien
+	End
+
+create proc get_dsQuyen
+as
+	Begin
+		select * from tbl_Quyen
+	End
+
+create proc update_TaiKhoan 
+	@tenTaiKhoan nchar(255),
+	@matkhau nchar(255),
+	@trangThai nvarchar(10),
+	@maGv int,
+	@maCb int,
+	@maQuyen int
+as
+	Begin
+		insert into tbl_TaiKhoan values(@tenTaiKhoan,@matkhau,@trangThai,@maGv,@maCb,@maQuyen)
+	End
