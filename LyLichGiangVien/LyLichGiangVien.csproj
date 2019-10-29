@@ -169,6 +169,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="View\AccountSetting.aspx" />
     <Content Include="View\dsHoSoLyLich.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\Welcome.aspx" />
@@ -196,6 +197,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AccountSetting.aspx.cs">
+      <DependentUpon>AccountSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\AccountSetting.aspx.designer.cs">
+      <DependentUpon>AccountSetting.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\dsHoSoLyLich.aspx.cs">
       <DependentUpon>dsHoSoLyLich.aspx</DependentUpon>
