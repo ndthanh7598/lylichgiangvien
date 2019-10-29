@@ -3,14 +3,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="page-header">Lý lịch giảng viên</h1>
+                <h1 class="page-header">Lý lịch khoa học</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Thông tin lý lịch giảng viên
+                        Thông tin lý lịch khoa học
                     </div>
                     <div class="panel-body">
                         <div class="row">
