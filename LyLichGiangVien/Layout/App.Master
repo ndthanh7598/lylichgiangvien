@@ -50,7 +50,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-user">
                             <li>
-                                <a href="#"><i class="fa fa-eercast fa-fw"></i> Đổi mật khẩu</a>
+                                <a href="doiMatKhau.aspx"><i class="fa fa-eercast fa-fw"></i> Đổi mật khẩu</a>
                             </li>
                             <li class="divider"></li>
                             <li>
@@ -83,13 +83,10 @@
                                 <a href="#"><i class="fa fa-archive fa-fw"></i> Quản lý hồ sơ khoa học<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="#">Tìm kiếm hồ sơ lý lịch</a>
+                                        <a href="quanLyHoSoKhoaHoc.aspx?status=load">Danh sách hồ sơ khoa học</a>
                                     </li>
                                     <li>
                                         <a href="#">Cập nhật hồ sơ lý lịch</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Duyệt hồ sơ lý lịch</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

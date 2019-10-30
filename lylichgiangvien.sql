@@ -109,6 +109,7 @@ insert into tbl_TaiKhoan(TenTaiKhoan, MatKhau, TrangThai, MaGV, MaCB, MaQuyen) v
 
 -- Procedure
 
+-- Thành
 create procedure get_thongtintaikhoan
 	@Taikhoan nvarchar(255),
 	@Matkhau nvarchar(255)
@@ -223,3 +224,88 @@ as
 								NamKetThuc = @NamKetThuc, GiaiThuong = @GiaiThuong
 					where MaBS = @MaBS
 	end
+
+	
+-- Huy
+
+	create proc updatePassWord
+	@matkhau nvarchar(255),
+	@TaiKhoan nvarchar(255)
+	as
+	update tbl_Taikhoan set MatKhau = @matkhau where TenTaiKhoan = @TaiKhoan;
+
+	create proc checkAcccount
+	@matkhau nvarchar(255),
+	@TaiKhoan nvarchar(255)
+	as
+	select * from tbl_TaiKhoan where MatKhau = @matkhau and TenTaiKhoan = @TaiKhoan;
+
+
+	create proc layTatCaLyLich
+	as
+ 	select GV.MaGV, LL.MaBS, GV.TenGV, LL.TenDeTaiNC, LL.NamBatDau, LL.NamKetThuc, LL.TrangThai, LL.GiaiThuong  from tbl_BSLyLich  LL, tbl_GiangVien GV
+	where LL.MaGV = GV.MaGV ;
+
+	create proc layTatCaLyLich_GV
+	@tenGV nvarchar(255)
+	as
+ 	select  GV.MaGV, LL.MaBS, GV.TenGV, LL.TenDeTaiNC, LL.NamBatDau, LL.NamKetThuc, LL.TrangThai, LL.GiaiThuong  from tbl_BSLyLich  LL, tbl_GiangVien GV
+	where LL.MaGV = GV.MaGV and GV.TenGV like '%'+@tenGV+'%';
+
+	create proc updateTrangThaiLyLich
+	@mabs int,
+	@trangthai nvarchar(10)
+	as
+	begin
+	if(@trangthai = 1)
+		begin 
+			update tbl_BSLyLich set TrangThai = 0 where MaBS = @mabs
+		end
+	else
+		begin 
+			update tbl_BSLyLich set TrangThai = 1 where MaBS = @mabs
+		end
+	end;
+
+	create proc layLyLichTheoMaBS
+	@mabs nvarchar(15)
+	as
+	select * from tbl_BSLyLich where MaBS = @mabs;
+
+	create proc update_lylich
+	@mabs int,
+	@tendetai nvarchar(255),
+	@nambatdau datetime,
+	@namketthuc datetime,
+	@giaithuong nvarchar(255)
+	as
+	update tbl_BSLyLich set TenDeTaiNC = @tendetai , NamBatDau = @nambatdau,
+	NamKetThuc = @namketthuc, GiaiThuong = @giaithuong
+	where MaBS = @mabs;
+
+	create proc danhSachHoSoLyLich_GV
+	as
+	select * from tbl_GiangVien gv, tbl_HocHam hh, tbl_DonVi dv, tbl_HocVi hv where
+	gv.MaHH = hh.MaHH and gv.MaHV = hv.MaHV and gv.MaDV = dv.madv;
+
+
+	create proc updateTrangThaiLyLichGV
+	@magv int,
+	@trangthai nvarchar(10)
+	as
+	begin
+	if(@trangthai = 'daduyet')
+		begin 
+			update tbl_GiangVien set TrangThai = N'chuaduyet' where MaGV = @magv
+		end
+	else
+		begin 
+			update tbl_GiangVien set TrangThai = N'daduyet' where MaGV = @magv
+		end
+	end;
+
+	create proc layTatCaLyLichGV
+	@tenGV nvarchar(255)
+	as
+ 	select * from tbl_GiangVien gv, tbl_HocHam hh, tbl_DonVi dv, tbl_HocVi hv where
+	gv.MaHH = hh.MaHH and gv.MaHV = hv.MaHV and gv.MaDV = dv.madv and gv.TenGV like '%'+@tenGV+'%';

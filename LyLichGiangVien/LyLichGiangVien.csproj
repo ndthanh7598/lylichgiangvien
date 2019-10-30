@@ -170,7 +170,9 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\BoSungLyLich.aspx" />
+    <Content Include="View\doiMatKhau.aspx" />
     <Content Include="View\Login.aspx" />
+    <Content Include="View\quanLyHoSoKhoaHoc.aspx" />
     <Content Include="View\ThongTinLyLich.aspx" />
     <Content Include="View\Welcome.aspx" />
     <Content Include="Web.config" />
@@ -205,12 +207,26 @@
     <Compile Include="View\BoSungLyLich.aspx.designer.cs">
       <DependentUpon>BoSungLyLich.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\doiMatKhau.aspx.cs">
+      <DependentUpon>doiMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\doiMatKhau.aspx.designer.cs">
+      <DependentUpon>doiMatKhau.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\quanLyHoSoKhoaHoc.aspx.cs">
+      <DependentUpon>quanLyHoSoKhoaHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\quanLyHoSoKhoaHoc.aspx.designer.cs">
+      <DependentUpon>quanLyHoSoKhoaHoc.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\ThongTinLyLich.aspx.cs">
       <DependentUpon>ThongTinLyLich.aspx</DependentUpon>
