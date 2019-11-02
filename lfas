@@ -1,0 +1,53 @@
+[33mcommit 11b63b1df942643942076e8071d2431e9f7950e1[m[33m ([m[1;36mHEAD -> [m[1;32mhuy[m[33m)[m
+Author: huy <huy@DESKTOP-69BHUF7>
+Date:   Thu Oct 31 22:36:49 2019 +0700
+
+    This is my file.
+
+[33mcommit 9c61ab9f87ed90f49db4094da2be9fbcc941700b[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Nguyễn Duy Thành <ndthanh.7598@gmail.com>
+Date:   Wed Oct 30 10:43:04 2019 +0700
+
+    commit doimatkhau, quanlyhosokhoahoc - Ngo Dang Huy
+
+[33mcommit 55d6ba5537024ccdf67bafccd39ae89e5abbfdff[m
+Author: Nguyễn Duy Thành <ndthanh.7598@gmail.com>
+Date:   Tue Oct 29 17:30:10 2019 +0700
+
+    Commit title ly lich khoa hoc
+
+[33mcommit a3aadb3021623263341eb9241c65f64335797101[m
+Author: Nguyễn Duy Thành <ndthanh.7598@gmail.com>
+Date:   Tue Oct 29 16:55:04 2019 +0700
+
+    commit khai bao ly lich gv - bo sung ly lich giang vien
+
+[33mcommit 4078ad56ccba8fc1bcafdafc4bdd86a87c47b812[m
+Author: Nguyễn Duy Thành <ndthanh.7598@gmail.com>
+Date:   Mon Oct 28 16:45:41 2019 +0700
+
+    change nullable fields database
+
+[33mcommit 312c808fcf30a4f6ae12505d13d0fe31e4e25dd7[m
+Author: Nguyễn Duy Thành <ndthanh.7598@gmail.com>
+Date:   Mon Oct 28 16:35:51 2019 +0700
+
+    first commit
+
+[33mcommit 354fdf2b1295bf8d6f5f17e32c766d6d266ad5e7[m
+Author: ndthanh7598 <33477641+ndthanh7598@users.noreply.github.com>
+Date:   Mon Oct 28 16:21:06 2019 +0700
+
+    Update .gitignore
+
+[33mcommit fdef7267c3c87c45b744781287ae0926fb72e164[m
+Author: ndthanh7598 <33477641+ndthanh7598@users.noreply.github.com>
+Date:   Mon Oct 28 16:11:52 2019 +0700
+
+    Update README.md
+
+[33mcommit c4351ff0639a3fc1968e93a6d05e235843869174[m
+Author: ndthanh7598 <33477641+ndthanh7598@users.noreply.github.com>
+Date:   Mon Oct 28 16:03:17 2019 +0700
+
+    Initial commit
