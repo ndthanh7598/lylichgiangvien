@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -173,6 +177,7 @@
     <Content Include="View\doiMatKhau.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\quanLyHoSoKhoaHoc.aspx" />
+    <Content Include="View\Thongkebaocao.aspx" />
     <Content Include="View\ThongTinLyLich.aspx" />
     <Content Include="View\Welcome.aspx" />
     <Content Include="Web.config" />
@@ -181,6 +186,12 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="baocao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>baocao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +239,13 @@
     <Compile Include="View\quanLyHoSoKhoaHoc.aspx.designer.cs">
       <DependentUpon>quanLyHoSoKhoaHoc.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Thongkebaocao.aspx.cs">
+      <DependentUpon>Thongkebaocao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Thongkebaocao.aspx.designer.cs">
+      <DependentUpon>Thongkebaocao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\ThongTinLyLich.aspx.cs">
       <DependentUpon>ThongTinLyLich.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -256,6 +274,15 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="baocao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>baocao.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

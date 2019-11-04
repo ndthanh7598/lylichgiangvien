@@ -95,7 +95,7 @@
                                 <a href="#"><i class="fa fa-outdent fa-fw"></i> Quản lý báo cáo thống kê<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="#">Lập báo cáo thống kê lý lịch khoa học</a>
+                                        <a href="Thongkebaocao.aspx">Lập báo cáo thống kê lý lịch khoa học</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

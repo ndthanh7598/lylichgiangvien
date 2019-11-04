@@ -8,7 +8,7 @@ namespace LyLichGiangVien.Model
 {
     public class ConnectDatabase
     {
-        public string strCon = @"Data Source=DESKTOP-KLCUD63\THANH;Initial Catalog=lylichgiangvien;Integrated Security=True";
+        public string strCon = @"Data Source=VUMANHDUC;Initial Catalog=lylichgiangvien;Integrated Security=True";
         public SqlConnection connectDatabase()
         {
             SqlConnection myCnn = new SqlConnection(strCon);
