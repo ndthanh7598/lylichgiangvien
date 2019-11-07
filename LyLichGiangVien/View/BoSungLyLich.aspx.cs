@@ -56,7 +56,7 @@ namespace LyLichGiangVien.View
                                     btnSaveFix.Visible = true;
                                     btnHuy.Visible = true;
                                 }
-                                titleForm.InnerText = "Chỉnh sửa lý lịch bổ sung";
+                                titleForm.InnerText = "Chỉnh sửa lý lịch";
                             }
                         }
                     }
