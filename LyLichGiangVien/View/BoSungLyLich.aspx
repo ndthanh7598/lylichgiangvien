@@ -98,6 +98,7 @@
                                     <div class="pull-right">
                                         <asp:Button ID="btnSave" runat="server" CssClass="btn btn-primary" OnClick="btnSave_Click" Text="Lưu" />
                                         <asp:Button ID="btnSaveFix" Visible="false" runat="server" CssClass="btn btn-primary" OnClick="btnSaveFix_Click" Text="Lưu" />
+                                        <asp:Button ID="btnHuy" Visible="false" runat="server" CssClass="btn btn-default" OnClick="btnHuy_Click" Text="Huỷ" ToolTip="Huỷ chỉnh sửa" />
                                     </div>
                                 </div>
                             </div>

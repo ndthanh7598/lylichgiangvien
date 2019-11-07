@@ -54,7 +54,9 @@ namespace LyLichGiangVien.View
                                     namKetThuc.Text = Convert.ToDateTime(rd["NamKetThuc"].ToString()).ToString("yyyy-MM-dd");
                                     btnSave.Visible = false;
                                     btnSaveFix.Visible = true;
+                                    btnHuy.Visible = true;
                                 }
+                                titleForm.InnerText = "Chỉnh sửa lý lịch";
                             }
                         }
                     }
@@ -224,6 +226,12 @@ namespace LyLichGiangVien.View
                 }
                 Response.Redirect("BoSungLyLich.aspx");
             }
+        }
+
+        protected void btnHuy_Click(object sender, EventArgs e)
+        {
+            // chuyển về trang ban đầu
+            Response.Redirect("BoSungLyLich.aspx");
         }
     }
 }
