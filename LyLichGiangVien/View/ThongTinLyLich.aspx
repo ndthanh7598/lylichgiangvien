@@ -105,7 +105,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="pull-right">
-                                        <asp:Label ID="lblDaDuyet" runat="server"></asp:Label>
+                                        <asp:Label ID="lblDaDuyet" CssClass="text-success" runat="server"></asp:Label>
                                         <asp:Button ID="btnSave" runat="server" CssClass="btn btn-primary" OnClick="btnSave_Click" Text="Lưu" />
                                     </div>
                                 </div>

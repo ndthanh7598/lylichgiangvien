@@ -28,12 +28,12 @@
                 <asp:BoundField DataField="TenGV" HeaderText="Tên GV"  />
                 <asp:TemplateField HeaderText="Ngày Sinh">
                     <ItemTemplate>
-                        <asp:Label Text='<%# Eval("NgaySinh","{0:dd-MM-yyyy}")   %>' DataFormatString="{0:dd-MM-yyyy}" runat="server" />
+                        <asp:Label Text='<%# Eval("NgaySinh","{0:dd/MM/yyyy}") %>' DataFormatString="{0:dd/MM/yyyy}" runat="server" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Tên GV">
+                <asp:TemplateField HeaderText="Giới tính">
                     <ItemTemplate>
-                        <asp:Label Text='<%# Eval("GioiTinh").ToString().Equals("0") ? "Nữ" : "Nam" %>' runat="server" />
+                        <asp:Label Text='<%# Eval("GioiTinh").ToString().Equals("Nữ") ? "Nữ" : "Nam" %>' runat="server" />
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="DiaChi" HeaderText="Địa Chỉ"  />
