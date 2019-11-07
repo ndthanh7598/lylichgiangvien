@@ -230,6 +230,7 @@ namespace LyLichGiangVien.View
 
         protected void btnHuy_Click(object sender, EventArgs e)
         {
+            // chuyển về trang ban đầu
             Response.Redirect("BoSungLyLich.aspx");
         }
     }
