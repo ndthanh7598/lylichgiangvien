@@ -3,7 +3,7 @@
      <div class="container">
          <div class="row">
             <div class="col-md-12">
-                <h1 class="page-header">Quản lý hồ sơ khoa học</h1>
+                <h1 class="page-header">Danh sách hồ sơ khoa học</h1>
             </div>
         </div>
         <form class="form-inline" runat="server">
